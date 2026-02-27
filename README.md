@@ -65,14 +65,20 @@ This project is structured using the src-layout to ensure clean packaging and te
 1. Navigate to the [GitHub Page](https://github.com/SeanDuffie/Python-Template).
 2. "Use this template" -> Create a new repository
 3. Clone the repo to your development environment, then open the folder as a project in VS Code.
-4. Initialize uv:
+4. Install [uv](https://docs.astral.sh/uv/getting-started/installation) (if not done already)
+    1. Windows:
+       - `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+    2. macOS and Linux:
+        - either: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+        - or: `wget -qO- https://astral.sh/uv/install.sh | sh`
+5. Initialize uv:
 ``` bash
 uv init --package
 uv add loguru python-dotenv
 uv add --group dev pytest ruff pyinstaller
 ```
-5. Setup Secrets: Copy `.env.example` to `.env` and fill in the values.
-6. Sync the Environment:
+6. Setup Secrets: Copy `.env.example` to `.env` and fill in the values.
+7. Sync the Environment:
 ``` bash
 uv sync
 ```
