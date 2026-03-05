@@ -19,22 +19,10 @@ This project is structured using the src-layout to ensure clean packaging and te
   - [📦 Building the Executable](#-building-the-executable)
   - [⚙️ VS Code Integration](#️-vs-code-integration)
   - [🛑 Important Notes](#-important-notes)
-
-## TODO
-
-### Features
-
-TODO
-
-### Bugs
-
-TODO
-
-## Updating README.md Table Of Contents (TOC)
-
-1. Open the Command Palette (`Ctrl+Shift+P`).
-2. Select `Markdown All in One: Create Table of Contents` to insert a TOC.
-3. It will automatically update every time the file is saved.
+- [Updating README.md Table Of Contents (TOC)](#updating-readmemd-table-of-contents-toc)
+- [TODO](#todo)
+  - [Features](#features)
+  - [Bugs](#bugs)
 
 ## 🛠 Features & Modern Choices
 | Feature |	Tool / Choice |	Why? |
@@ -154,3 +142,21 @@ We have included a launch.json that:
 2. ***ALWAYS*** commit uv.lock. It ensures everyone on the team has the exact same environment.
 
 3. ***Imports***: Always use absolute imports from the package root (e.g., from my_project.logic import ...).
+
+## Updating README.md Table Of Contents (TOC)
+
+1. Open the Command Palette (`Ctrl+Shift+P`).
+2. Select `Markdown All in One: Create Table of Contents` to insert a TOC.
+3. It will automatically update every time the file is saved.
+
+## TODO
+
+### Features
+
+TODO
+
+### Bugs
+
+TODO
+
+
