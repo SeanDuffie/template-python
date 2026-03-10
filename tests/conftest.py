@@ -9,7 +9,7 @@ import pytest
 @pytest.fixture
 def sample_user():
     """Provides a valid user model for testing."""
-    test_user_mapping = {"test_user", "test@example.com"}
+    test_user_mapping = {"username": "test_user", "email": "test@example.com"}
     # test_user = UserProfile(username="test_user", email="test@example.com")
 
     return test_user_mapping
