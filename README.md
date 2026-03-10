@@ -10,6 +10,10 @@ This project is structured using the src-layout to ensure clean packaging and te
 - [🛠 Features \& Modern Choices](#-features--modern-choices)
 - [📂 Project Structure](#-project-structure)
 - [Initial Setup for a New Project](#initial-setup-for-a-new-project)
+- [📚 Documentation](#-documentation)
+  - [Initializing Doxygen](#initializing-doxygen)
+  - [Generating Docs](#generating-docs)
+  - [View the Results](#view-the-results)
 - [Development Workflow](#development-workflow)
   - [Running the App](#running-the-app)
   - [Linting \& Formatting](#linting--formatting)
@@ -81,6 +85,44 @@ uv add --group dev pytest ruff pyinstaller
 7. Sync the Environment:
 ``` bash
 uv sync
+```
+
+## 📚 Documentation
+
+Documentation is integrated directly into the CMake build process.
+
+### Initializing Doxygen
+
+1. Generate the default "Doxyfile" using `doxygen -g`.
+2. Make the following edits to the Doxyfile keys:
+   1. `PROJECT_NAME = "Project Name"`
+   2. `RECURSIVE = YES` (Scans the "./src/ folder)
+   3. `OUTPUT_DIRECTORY = docs` (Where the HTML is saved)
+   4. `USE_MDFILE_AS_MAINPAGE = README.md` (Makes the README the "Home" page)
+
+### Generating Docs
+
+1. You can manually generate the HTML documentation using the `docs` target:
+``` bash
+doxygen Doxygile
+```
+2. Or you can integrate it into `uv`:
+   1. Add the following to your "pyproject.toml" file:
+    ``` toml
+    [project.scripts]
+    docs = "doxygen Doxyfile"
+    ```
+   2. Call `uv run docs` to regenerate the documentation anytime.
+
+### View the Results
+
+1. On Windows
+``` bash
+start html/index.html
+```
+2. On macOS
+``` bash
+open html/index.html
 ```
 
 ## Development Workflow
