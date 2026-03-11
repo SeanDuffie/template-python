@@ -41,10 +41,11 @@ jobs:
       - name: Run Tests
         run: uv run pytest
 
+      - name: Install Doxygen
+        uses: ssciwr/doxygen-install@v1
+        with:
+          doxygen-version: '1.9.8'
+
       - name: Build Documentation
-        run: |
-          # Install doxygen if not on the runner
-          sudo apt-get install -y doxygen
-          # Run doxygen and treat warnings as errors
-          doxygen Doxyfile
+        run: doxygen Doxyfile
 
